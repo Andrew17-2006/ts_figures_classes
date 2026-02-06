@@ -9,10 +9,8 @@ export interface Figure {
 export class Triangle implements Figure {
   shape: Shape = 'triangle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public color: Color,
     public a: number,
     public b: number,
     public c: number,
@@ -27,8 +25,6 @@ export class Triangle implements Figure {
     if (max >= sum) {
       throw new Error(`sides ${a}, ${b} and ${c} can't form a triangle`);
     }
-
-    this.color = color;
   }
 
   getArea(): number {
@@ -42,17 +38,13 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   shape: Shape = 'circle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public color: Color,
     public radius: number,
   ) {
     if (radius <= 0) {
       throw new Error('Radius must be greater than 0');
     }
-
-    this.color = color;
   }
 
   getArea(): number {
@@ -65,18 +57,14 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   shape: Shape = 'rectangle';
 
-  color: Color;
-
   constructor(
-    color: Color,
+    public color: Color,
     public width: number,
     public height: number,
   ) {
     if (width <= 0 || height <= 0) {
       throw new Error('Width and height must be greater than 0');
     }
-
-    this.color = color;
   }
 
   getArea(): number {
