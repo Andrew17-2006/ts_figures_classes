@@ -29,9 +29,6 @@ export class Triangle implements Figure {
     }
 
     this.color = color;
-    this.a = a;
-    this.b = b;
-    this.c = c;
   }
 
   getArea(): number {
@@ -56,7 +53,6 @@ export class Circle implements Figure {
     }
 
     this.color = color;
-    this.radius = radius;
   }
 
   getArea(): number {
@@ -80,8 +76,6 @@ export class Rectangle implements Figure {
       throw new Error('Width and height must be greater than 0');
     }
 
-    this.width = width;
-    this.height = height;
     this.color = color;
   }
 
